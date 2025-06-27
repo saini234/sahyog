@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahyog Tax Consultant & Co. - Professional Tax Solutions</title>
+    <meta
+      name="description"
+      content="Professional tax consultancy services for individuals, startups and small businesses. Get expert help with tax filing, GST registration, company registration and more."
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#1a237e", secondary: "#4051b5" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          font-family: 'Poppins', sans-serif;
+      }
+      .glassmorphism {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .service-card {
+          transition: all 0.3s ease;
+          transform: translateZ(0);
+      }
+      .service-card:hover {
+          transform: translateY(-10px) translateZ(10px);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .floating-element {
+          animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      .custom-checkbox {
+          position: relative;
+          cursor: pointer;
+      }
+      .custom-checkbox input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+      }
+      .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border: 2px solid #ddd;
+          border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+          border-color: #ccc;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+          background-color: #1a237e;
+          border-color: #1a237e;
+      }
+      .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+          display: block;
+      }
+      .custom-checkbox .checkmark:after {
+          left: 6px;
+          top: 2px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+      }
+      .custom-switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+      }
+      .custom-switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: .4s;
+          border-radius: 34px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #1a237e;
+      }
+      input:checked + .slider:before {
+          transform: translateX(26px);
+      }
+      .hero-bg {
+          background-image: url('C:/Users/hp/Downloads/background.jpg');
+          background-size: cover;
+          background-position: center right;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glassmorphism">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-primary font-['Pacifico'] text-2xl"
+            >Sahyog Tax</a
+          >
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="text-primary font-medium hover:text-secondary transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 font-medium hover:text-primary transition-colors"
+              >About Us</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 font-medium hover:text-primary transition-colors"
+              >Services</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-700 font-medium hover:text-primary transition-colors"
+              >Testimonials</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 font-medium hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </nav>
+
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://wa.me/918168476366"
+              class="flex items-center px-4 py-2 bg-green-500 text-white rounded-button whitespace-nowrap hover:bg-green-600 transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-whatsapp-line"></i>
+              </div>
+              <span class="hidden md:inline">WhatsApp</span>
+            </a>
+            <a
+              href="tel:+918168476366"
+              class="flex items-center px-4 py-2 bg-primary text-white rounded-button whitespace-nowrap hover:bg-secondary transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-phone-line"></i>
+              </div>
+              <span class="hidden md:inline">Call Us</span>
+            </a>
+          </div>
+
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-primary"
+            id="mobileMenuButton"
+          >
+            <i class="ri-menu-line ri-2x"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+          <nav class="flex flex-col space-y-4">
+            <a href="#" class="text-primary font-medium">Home</a>
+            <a href="#about" class="text-gray-700 font-medium">About Us</a>
+            <a href="#services" class="text-gray-700 font-medium">Services</a>
+            <a href="#testimonials" class="text-gray-700 font-medium"
+              >Testimonials</a
+            >
+            <a href="#contact" class="text-gray-700 font-medium">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-32 pb-20 md:pt-40 md:pb-32">
+      <div class="container mx-auto px-4">
+        <div class="w-full md:w-1/2 relative z-10">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+          >
+            Professional Tax Solutions for Your Business
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 mb-8">
+            Expert consultancy for tax filing, GST registration, and company
+            formation. Simplifying compliance for individuals and businesses.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact"
+              class="px-8 py-4 bg-primary text-white rounded-button whitespace-nowrap text-center hover:bg-secondary transition-colors"
+            >
+              Get Free Consultation
+            </a>
+            <a
+              href="https://wa.me/918168476366"
+              class="flex items-center justify-center px-8 py-4 bg-white text-primary rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-whatsapp-line"></i>
+              </div>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="w-full md:w-1/2 order-2 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+              About Sahyog Tax Consultant & Co.
+            </h2>
+            <p class="text-gray-700 mb-6">
+              Founded with a vision to simplify tax and compliance for
+              businesses of all sizes, Sahyog Tax Consultant & Co. brings
+              professional expertise to your doorstep. We understand that
+              navigating the complex world of taxation and regulatory compliance
+              can be overwhelming.
+            </p>
+            <p class="text-gray-700 mb-6">
+              Our team of experienced professionals is dedicated to providing
+              personalized solutions that meet your specific needs. We stay
+              updated with the latest tax laws and regulations to ensure that
+              you receive accurate and timely advice.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4"
+                >
+                  <i class="ri-shield-check-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Trusted Expertise</h3>
+                  <p class="text-gray-600">
+                    Years of experience in tax consultancy and business
+                    registration
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4"
+                >
+                  <i class="ri-customer-service-2-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">
+                    Personalized Service
+                  </h3>
+                  <p class="text-gray-600">
+                    Tailored solutions to meet your unique business requirements
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4"
+                >
+                  <i class="ri-time-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Timely Delivery</h3>
+                  <p class="text-gray-600">
+                    Quick turnaround time for all services and filings
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4"
+                >
+                  <i class="ri-secure-payment-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Affordable Pricing</h3>
+                  <p class="text-gray-600">
+                    Competitive rates without compromising on quality
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 order-1 md:order-2">
+            <div class="relative">
+              <div
+                class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-lg floating-element"
+              ></div>
+              <div
+                class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/10 rounded-lg floating-element"
+                style="animation-delay: 2s;"
+              ></div>
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20tax%20consultants%20working%20in%20a%20modern%20office%20environment.%20Team%20of%20diverse%20business%20professionals%20discussing%20tax%20documents%20and%20financial%20plans.%20Clean%2C%20corporate%20setting%20with%20computers%20and%20financial%20charts%20visible.%20Professional%20attire%20and%20positive%20business%20atmosphere&width=600&height=600&seq=2&orientation=squarish"
+                alt="Sahyog Tax Consultant Team"
+                class="w-full h-auto rounded-lg shadow-xl relative z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Our Services
+          </h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Comprehensive tax and business registration solutions to help you
+            focus on what matters most - growing your business.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-file-list-3-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                Income Tax Filing
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Professional assistance with income tax return filing for
+                individuals, businesses, and professionals. We ensure maximum
+                tax benefits and complete compliance.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-government-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                GST Registration & Filing
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Complete GST registration and regular filing services. We handle
+                the entire process from application to final registration and
+                periodic returns.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-building-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                Company Registration
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Expert assistance for Private Limited, LLP, and Partnership firm
+                registration. We guide you through the entire process with
+                minimal paperwork.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-file-paper-2-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                ROC Compliance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive ROC compliance services including annual filings,
+                event-based filings, and maintaining statutory registers for
+                companies.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-trademark-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                Trademark Registration
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Protect your brand identity with our trademark registration
+                services. We handle the entire process from search to
+                registration.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="h-48 bg-primary/5 flex items-center justify-center">
+              <div
+                class="w-24 h-24 flex items-center justify-center text-primary"
+              >
+                <i class="ri-verified-badge-line ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-primary mb-3">
+                FSSAI & Other Licenses
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Complete assistance for FSSAI, PF/ESIC registration, and ISO
+                certification. We ensure all regulatory requirements are met
+                efficiently.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center text-primary font-medium hover:text-secondary"
+              >
+                Learn More
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="w-full md:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20tax%20consultant%20explaining%20financial%20documents%20to%20clients.%20Modern%20office%20setting%20with%20computer%20screens%20showing%20tax%20forms%20and%20financial%20charts.%20Clean%2C%20corporate%20environment%20with%20professional%20attire.%20Focus%20on%20consultation%20and%20client%20service&width=600&height=500&seq=3&orientation=landscape"
+              alt="Why Choose Sahyog Tax Consultants"
+              class="w-full h-auto rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8">
+              Why Choose Sahyog Tax Consultant
+            </h2>
+
+            <div class="space-y-6">
+              <div class="glassmorphism p-6 rounded-lg shadow-sm">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-user-star-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Expert Team</h3>
+                    <p class="text-gray-600">
+                      Our team consists of experienced professionals with
+                      in-depth knowledge of tax laws and regulations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glassmorphism p-6 rounded-lg shadow-sm">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-price-tag-3-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">
+                      Affordable Pricing
+                    </h3>
+                    <p class="text-gray-600">
+                      We offer competitive rates without compromising on the
+                      quality of our services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glassmorphism p-6 rounded-lg shadow-sm">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Timely Delivery</h3>
+                    <p class="text-gray-600">
+                      We understand the importance of deadlines and ensure
+                      timely completion of all services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glassmorphism p-6 rounded-lg shadow-sm">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-customer-service-2-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">
+                      Dedicated Support
+                    </h3>
+                    <p class="text-gray-600">
+                      We provide continuous support and guidance throughout the
+                      process and beyond.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            What Our Clients Say
+          </h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our clients have to say
+            about our services.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-2x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "Sahyog Tax Consultant helped me navigate through the complex GST
+              registration process with ease. Their team was professional,
+              responsive, and extremely knowledgeable. Highly recommended!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary mr-4"
+              >
+                <i class="ri-user-3-line ri-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Rajesh Sharma</h4>
+                <p class="text-sm text-gray-500">Small Business Owner</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-2x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "I was struggling with my income tax filing until I found Sahyog.
+              They made the entire process seamless and even helped me save a
+              significant amount through proper tax planning. Excellent
+              service!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary mr-4"
+              >
+                <i class="ri-user-3-line ri-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Priya Malhotra</h4>
+                <p class="text-sm text-gray-500">IT Professional</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-double-quotes-l ri-2x"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "As a startup founder, I needed help with company registration and
+              compliance. Sahyog provided end-to-end support and made sure
+              everything was done correctly and on time. Their expertise is
+              invaluable!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary mr-4"
+              >
+                <i class="ri-user-3-line ri-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Vikram Mehta</h4>
+                <p class="text-sm text-gray-500">Startup Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Get In Touch
+          </h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Have questions or need assistance? Reach out to us and our team will
+            get back to you shortly.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="w-full lg:w-1/2">
+            <div class="glassmorphism p-8 rounded-lg shadow-md">
+              <h3 class="text-2xl font-semibold text-primary mb-6">
+                Send Us a Message
+              </h3>
+              <form id="contactForm">
+                <div class="mb-6">
+                  <label for="name" class="block text-gray-700 mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label for="phone" class="block text-gray-700 mb-2"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Your phone number"
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label for="service" class="block text-gray-700 mb-2"
+                    >Service Required</label
+                  >
+                  <div class="relative">
+                    <select
+                      id="service"
+                      class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 pr-8"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="income-tax">Income Tax Filing</option>
+                      <option value="gst">GST Registration & Filing</option>
+                      <option value="company">Company Registration</option>
+                      <option value="roc">ROC Compliance</option>
+                      <option value="trademark">Trademark Registration</option>
+                      <option value="fssai">FSSAI & Other Licenses</option>
+                    </select>
+                    <div
+                      class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                    >
+                      <i class="ri-arrow-down-s-line text-gray-500"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label for="message" class="block text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="How can we help you?"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full px-6 py-4 bg-primary text-white rounded-button whitespace-nowrap hover:bg-secondary transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2">
+            <div class="glassmorphism p-8 rounded-lg shadow-md h-full">
+              <h3 class="text-2xl font-semibold text-primary mb-6">
+                Contact Information
+              </h3>
+
+              <div class="space-y-8">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-phone-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-1">Phone</h4>
+                    <p class="text-gray-700">
+                      <a href="tel:+918168476366" class="hover:text-primary"
+                        >+91 81684-76366</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-1">Email</h4>
+                    <p class="text-gray-700">
+                      <a
+                        href="mailto:sahyogtax121@gmail.com"
+                        class="hover:text-primary"
+                        >sahyogtax121@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-whatsapp-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-1">WhatsApp</h4>
+                    <p class="text-gray-700 mb-4">
+                      Scan the QR code or click the button below
+                    </p>
+                    <div class="flex items-center space-x-4">
+                      <div class="w-32 h-32 bg-white p-2 rounded shadow-sm">
+                        <img
+                          src="https://readdy.ai/api/search-image?query=QR%20code%20for%20WhatsApp%20contact%2C%20simple%20black%20and%20white%20QR%20code%20on%20white%20background%2C%20clean%20and%20scannable&width=200&height=200&seq=4&orientation=squarish"
+                          alt="WhatsApp QR Code"
+                          class="w-full h-full"
+                        />
+                      </div>
+                      <a
+                        href="https://wa.me/918168476366"
+                        class="px-6 py-3 bg-green-500 text-white rounded-button whitespace-nowrap hover:bg-green-600 transition-colors flex items-center"
+                      >
+                        <div
+                          class="w-5 h-5 flex items-center justify-center mr-2"
+                        >
+                          <i class="ri-whatsapp-line"></i>
+                        </div>
+                        Chat Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 shrink-0"
+                  >
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-1">Business Hours</h4>
+                    <p class="text-gray-700">
+                      Monday - Saturday: 10:00 AM - 7:00 PM
+                    </p>
+                    <p class="text-gray-700">Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="#"
+              class="text-white font-['Pacifico'] text-2xl mb-4 inline-block"
+              >Sahyog Tax</a
+            >
+            <p class="text-white/80 mb-6">
+              Professional tax consultancy services for individuals and
+              businesses. Simplifying tax compliance since 2018.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Income Tax Filing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >GST Registration & Filing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Company Registration</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >ROC Compliance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >Trademark Registration</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white/80 hover:text-white transition-colors"
+                  >FSSAI & Other Licenses</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-white/80">+91 81684-76366</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-white/80">sahyogtax121@gmail.com</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-whatsapp-line"></i>
+                </div>
+                <span class="text-white/80">WhatsApp: +91 81684-76366</span>
+              </li>
+            </ul>
+            <div class="mt-6 flex items-center space-x-4">
+              <div class="w-10 h-6 flex items-center justify-center">
+                <i class="ri-visa-fill ri-lg"></i>
+              </div>
+              <div class="w-10 h-6 flex items-center justify-center">
+                <i class="ri-mastercard-fill ri-lg"></i>
+              </div>
+              <div class="w-10 h-6 flex items-center justify-center">
+                <i class="ri-paypal-fill ri-lg"></i>
+              </div>
+              <div class="w-10 h-6 flex items-center justify-center">
+                <i class="ri-google-pay-fill ri-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 mt-12 pt-6 text-center">
+          <p class="text-white/70">
+            © 2025 Sahyog Tax Consultant & Co. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script id="mobileMenuToggle">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          // Change icon based on menu state
+          const icon = mobileMenuButton.querySelector("i");
+          if (mobileMenu.classList.contains("hidden")) {
+            icon.classList.remove("ri-close-line");
+            icon.classList.add("ri-menu-line");
+          } else {
+            icon.classList.remove("ri-menu-line");
+            icon.classList.add("ri-close-line");
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            const icon = mobileMenuButton.querySelector("i");
+            icon.classList.remove("ri-close-line");
+            icon.classList.add("ri-menu-line");
+          });
+        });
+      });
+    </script>
+
+    <script id="contactFormHandler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const phone = document.getElementById("phone").value;
+          const service = document.getElementById("service").value;
+          const message = document.getElementById("message").value;
+
+          // Basic validation
+          if (!name || !phone || !service || !message) {
+            alert("Please fill all the required fields");
+            return;
+          }
+
+          // Here you would normally send the form data to a server
+          // For this demo, we'll just show a success message
+          alert("Thank you for contacting us! We will get back to you shortly.");
+          contactForm.reset();
+        });
+      });
+    </script>
+
+    <script id="scrollEffects">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for header height
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Header background change on scroll
+        const header = document.querySelector("header");
+
+        function updateHeaderBackground() {
+          if (window.scrollY > 50) {
+            header.classList.add("shadow-md");
+            header.style.background = "rgba(255, 255, 255, 0.9)";
+          } else {
+            header.classList.remove("shadow-md");
+            header.style.background = "rgba(255, 255, 255, 0.7)";
+          }
+        }
+
+        window.addEventListener("scroll", updateHeaderBackground);
+        updateHeaderBackground(); // Initial call
+      });
+    </script>
+  </body>
+</html>
